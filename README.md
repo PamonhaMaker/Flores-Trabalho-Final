@@ -1,5 +1,5 @@
 # Flores-Trabalho-Final
-<?php
+
 /**************************
 Curso: Engenharia de Software
 Disciplina: Linguagem e Técnicas de Programacão
@@ -15,4 +15,4 @@ Descritivo: Este trabalho tem como objetivo levar os alunos a exercitarem os con
 desenvolvimento na Linguagem PHP abordando os conceitos desenvolvimento de uma aplicação
 Web que se conectada a um banco de dados para a persistência de dados..
 ***************************/
-?>
+
