@@ -1,8 +1,8 @@
 # Flores-Trabalho-Final
 
-/**************************
-Curso: Engenharia de Software
-Disciplina: Linguagem e Técnicas de Programacão
+#/**************************
+#Curso: Engenharia de Software
+#Disciplina: Linguagem e Técnicas de Programacão
 Professor: Flores
 Turma: ESOFT-2A
 Componentes:
