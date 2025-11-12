@@ -1,0 +1,269 @@
+/* ==========================================
+   Cardápio do Don Diniz - Tema Escuro Moderno
+   ========================================== */
+
+/* ---------- Paleta de cores (tema escuro padrão) ---------- */
+:root {
+    --cor-principal: #1cc15a;     /* Verde principal vibrante */
+    --cor-secundaria: #29e072;    /* Verde mais claro */
+    --cor-fundo: #101010;         /* Fundo geral escuro */
+    --cor-texto: #e8fce9;         /* Texto claro */
+    --cor-branca: #181818;        /* Cinza escuro (cards e containers) */
+    --cor-alerta: #dc3545;        /* Vermelho alerta */
+    --sombra: rgba(0, 0, 0, 0.6); /* Sombra mais intensa */
+}
+
+/* ---------- Suporte opcional ao modo claro do sistema ---------- */
+@media (prefers-color-scheme: light) {
+    :root {
+        --cor-principal: #0a7819;
+        --cor-secundaria: #1cc15a;
+        --cor-fundo: #f4fff6;
+        --cor-texto: #222;
+        --cor-branca: #fff;
+        --sombra: rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* ---------- Corpo da página ---------- */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* ---------- Título do Cabeçalho ---------- */
+header h1 {
+    margin: 0;
+    font-size: 2.4em;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: #ffffff; /* Título branco puro */
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Navegação ---------- */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+/* ---------- Container Principal ---------- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    background: var(--cor-branca);
+    color: var(--cor-texto);
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Títulos ---------- */
+h1, h2 {
+    color: var(--cor-principal);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* ---------- Tabelas ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    background: #1c1c1c;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+th {
+    background: var(--cor-principal);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+tr:nth-child(even) {
+    background: #181818;
+}
+
+tr:hover {
+    background: rgba(28, 193, 90, 0.1);
+    transition: 0.3s;
+}
+
+/* ---------- Botões ---------- */
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 8px 6px;
+    background-color: var(--cor-principal);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.button:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.5);
+}
+
+.button.edit {
+    background-color: #ffc107;
+    color: #222;
+}
+
+.button.edit:hover {
+    background-color: #e0a800;
+}
+
+.button.delete {
+    background-color: var(--cor-alerta);
+}
+
+.button.delete:hover {
+    background-color: #b82a35;
+}
+
+/* ---------- Formulários ---------- */
+form {
+    margin-top: 35px;
+    background-color: #181818;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--cor-principal);
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #0f0f0f;
+    color: #f4fff6;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 6px rgba(28,193,90,0.4);
+    outline: none;
+}
+
+form button[type="submit"] {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px;
+    border-top: 2px solid var(--cor-principal);
+    color: var(--cor-principal);
+    background: #0b0b0b;
+    border-radius: 0 0 15px 15px;
+    font-weight: 500;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
